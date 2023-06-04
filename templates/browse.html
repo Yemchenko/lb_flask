@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse entries</title>
+</head>
+<body style="background-color: rgb(233, 169, 169);">
+    <h1>Browse entries</h1>
+    {% if entries|length > 0 %}
+        <ul>
+        {% for entry in entries %}
+            <li><b>{{ entry[2] }}</b> ({{ entry[1] }})
+            <p>
+            {{ entry[3] }}
+            <hr>
+        {% endfor %}
+        </ul>
+    {% else %}
+        This blog is empty.
+    {% endif %}
+
+    <img width="322" height="228" src="https://drive.google.com/uc?export=view&id=17shceigLjw9uEn_4YLHz2MVyR7ourUsG" alt="kitty">
+</body>
+</html>
